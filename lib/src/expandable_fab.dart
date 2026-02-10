@@ -83,7 +83,7 @@ class ExpandableFab extends StatefulWidget {
     this.margin = const EdgeInsets.all(0),
   }) : location = location ?? ExpandableFab.location;
 
-  final ExpandableFabLocation location;
+  final ExpandableFabLocation fabLocation;
   
   // Margin for the FAB
   final EdgeInsets margin;
@@ -251,7 +251,7 @@ class ExpandableFabState extends State<ExpandableFab>
 
   @override
   Widget build(BuildContext context) {
-    final location = widget.location;
+    final location = widget.fabLocation;
     Offset? offset;
     Widget? cache;
     return ValueListenableBuilder<ScaffoldPrelayoutGeometry?>(
