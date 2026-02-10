@@ -82,7 +82,7 @@ class ExpandableFab extends StatefulWidget {
     this.elevation,
     this.margin = const EdgeInsets.all(0),
   }) : location = location ?? ExpandableFabLocation();
-f  
+  
   // Margin for the FAB
   final EdgeInsets margin;
 
