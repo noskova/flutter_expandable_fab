@@ -57,11 +57,11 @@ class ExpandableFabOverlayStyle {
 @immutable
 class ExpandableFab extends StatefulWidget {
   /// The location of the ExpandableFab on the screen.
-  static final FloatingActionButtonLocation location = _ExpandableFabLocation();
+  static final FloatingActionButtonLocation location = ExpandableFabLocation();
 
   const ExpandableFab({
     super.key,
-    _ExpandableFabLocation? location,
+    ExpandableFabLocation? location,
     this.distance = 100,
     this.duration = const Duration(milliseconds: 250),
     this.fanAngle = 90,
@@ -81,7 +81,7 @@ class ExpandableFab extends StatefulWidget {
     this.openCloseStackAlignment = Alignment.center,
     this.elevation,
     this.margin = const EdgeInsets.all(0),
-  }) : location = location ?? _ExpandableFabLocation();
+  }) : location = location ?? ExpandableFabLocation();
 f  
   // Margin for the FAB
   final EdgeInsets margin;
@@ -454,7 +454,7 @@ class ExpandableFabState extends State<ExpandableFab>
   }
 }
 
-class _ExpandableFabLocation extends StandardFabLocation {
+class ExpandableFabLocation extends StandardFabLocation {
   final ValueNotifier<ScaffoldPrelayoutGeometry?> scaffoldGeometry =
       ValueNotifier(null);
   @override
