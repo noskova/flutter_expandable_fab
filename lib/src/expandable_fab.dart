@@ -81,7 +81,7 @@ class ExpandableFab extends StatefulWidget {
     this.openCloseStackAlignment = Alignment.center,
     this.elevation,
     this.margin = const EdgeInsets.all(0),
-  }) : location = location ?? ExpandableFabLocation();
+  }) : location = location ?? const ExpandableFabLocation();
   
   // Margin for the FAB
   final EdgeInsets margin;
