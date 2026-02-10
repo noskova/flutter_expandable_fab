@@ -61,6 +61,7 @@ class ExpandableFab extends StatefulWidget {
 
   const ExpandableFab({
     super.key,
+    _ExpandableFabLocation? location,
     this.distance = 100,
     this.duration = const Duration(milliseconds: 250),
     this.fanAngle = 90,
@@ -80,7 +81,8 @@ class ExpandableFab extends StatefulWidget {
     this.openCloseStackAlignment = Alignment.center,
     this.elevation,
     this.margin = const EdgeInsets.all(0),
-  });
+  }) : location = location ?? _ExpandableFabLocation();
+f  
   // Margin for the FAB
   final EdgeInsets margin;
 
@@ -247,7 +249,7 @@ class ExpandableFabState extends State<ExpandableFab>
 
   @override
   Widget build(BuildContext context) {
-    final location = ExpandableFab.location as _ExpandableFabLocation;
+    final location = widget.location;
     Offset? offset;
     Widget? cache;
     return ValueListenableBuilder<ScaffoldPrelayoutGeometry?>(
